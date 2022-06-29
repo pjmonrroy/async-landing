@@ -4,13 +4,17 @@ const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UCEuOwB9vSL1oPK
 
 const content = null || document.getElementById('content');
 
+const PI =  {
+    'X-RapidAPI-Key': '7c9231aed2msh07698d902e62d0bp1af748jsn623cb2392a8f',
+    'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+}
+
+
 const options = {
 	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '7c9231aed2msh07698d902e62d0bp1af748jsn623cb2392a8f',
-		'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-	}
+	headers: PI
 };
+
 
 async function fetchData(urlApi) {
     const response = await fetch(urlApi, options);
@@ -46,3 +50,5 @@ async function fetchData(urlApi) {
         console.log(error);
     }
 })();
+
+
